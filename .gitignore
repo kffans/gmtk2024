@@ -67,6 +67,7 @@ ExportedObj/
 ._*
 .idea/
 .idea/*
+Packages/
 
 # Remove information about ProjectSettings
 ProjectSettings/
