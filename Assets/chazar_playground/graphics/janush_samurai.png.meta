@@ -158,9 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      janush_samurai_0: 5117224130206846547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

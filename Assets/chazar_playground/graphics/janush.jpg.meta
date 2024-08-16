@@ -158,9 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      janush_0: -411437632474178039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
