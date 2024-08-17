@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Gra została zamknięta"); 
+        Debug.Log("Game was closed"); 
     }
 
     public void OpenOptions()
