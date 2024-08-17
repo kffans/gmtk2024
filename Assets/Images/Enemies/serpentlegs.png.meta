@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      serpentlegs_0: -1448524436995987602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

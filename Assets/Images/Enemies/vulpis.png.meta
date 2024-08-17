@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vulpis_0: -8911947577591593611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
