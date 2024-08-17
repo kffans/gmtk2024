@@ -7,9 +7,9 @@ public class Menu : MonoBehaviour
     public GameObject? optionsCanvas;
     public GameObject? creditsCanvas;
 
-    public void StartGame()
+    public void LoadLevel(string level)
     {
-        SceneManager.LoadScene("SceneFight"); 
+        SceneManager.LoadScene(level); 
     }
 
     public void QuitGame()
