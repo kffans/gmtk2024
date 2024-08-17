@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      basilisk_0: -7573000497792475764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
