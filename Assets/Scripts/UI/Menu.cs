@@ -3,13 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject? menuCanvas;
+    #nullable enable
+	public GameObject? menuCanvas;
     public GameObject? optionsCanvas;
     public GameObject? creditsCanvas;
+	#nullable disable
 
     public void LoadLevel(string level)
     {
-        SceneManager.LoadScene(level); 
+        Time.timeScale = 1f;
+		SceneManager.LoadScene(level); 
     }
 
     public void QuitGame()
