@@ -3,21 +3,28 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     public GameManager gameManager;
-	public bool lol=true;
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //LeanTween.rotateAround(gameObject, Vector3.forward, 200f, 2f);
-    }
+	public bool grabbed = false;
+	private Vector3 mousePosPrev;
+	private Vector3 mousePos;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(gameManager.currentPhase == GameManager.Phase.Challenge && lol){
-			lol=false;
+    void Update() {
+		//LeanTween.rotateAround(gameObject, Vector3.forward, 200f, 2f);
+        if(gameManager.currentPhase == GameManager.Phase.Challenge && grabbed){
+			Screen.lockCursor = true;
+			float rotation = 1f;
+			transform.Rotate(new Vector3(0, 0, rotation));
+			//mousePosPrev.position.x - mousePos.position.x
+			
 			//gameManager.challengeSuccess = false;
-			LeanTween.rotateAround(gameObject, Vector3.forward, 200f, 2f);
-			//transform.Rotate(new Vector3(0, 0, rotation));
+			if (Input.GetMouseButtonUp(0)){
+				grabbed = false;
+			}
 		}
     }
+	
+	public void StartGrabbing(){
+		if(gameManager.currentPhase == GameManager.Phase.Challenge){
+			grabbed = true;
+		}
+	}
 }
