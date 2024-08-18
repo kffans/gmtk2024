@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
 	public float durationPlayerDeath = 0f; bool doneOncePlayerDeath = false;
 	public float durationWin = 0f; 		   bool doneOnceWin = false;
 	
+	public GameObject gameOverBlackout;
+	public GameObject canvas;
+	
+	
+	
     void Start() {
 		currentPhase = Phase.Intro;
     }
@@ -108,6 +113,9 @@ public class GameManager : MonoBehaviour
 				if(!doneOncePlayerDeath) {
 					doneOncePlayerDeath = true;
 					
+					//bell sound and a scream after
+					gameOverBlackout.SetActive(true);
+					canvas.SetActive(false);
 					Debug.Log("You've been defeated!");
 				}
 				
@@ -118,6 +126,7 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceWin) {
 					doneOnceWin = true;
 					
+					//play cheer music on, load end credits scene
 					Debug.Log("You've won!");
 				}
 				
