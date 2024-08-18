@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayMusic("menu_song");
+        PlayMusic("menu");
     }
 
     public void PlayMusicClip(AudioClip clip)
