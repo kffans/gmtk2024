@@ -10,14 +10,17 @@ public class Sword : MonoBehaviour
     void Update() {
 		//LeanTween.rotateAround(gameObject, Vector3.forward, 200f, 2f);
         if(gameManager.currentPhase == GameManager.Phase.Challenge && grabbed){
-			Screen.lockCursor = true;
+			Cursor.lockState = CursorLockMode.Locked;
 			float rotation = 1f;
 			transform.Rotate(new Vector3(0, 0, rotation));
 			//mousePosPrev.position.x - mousePos.position.x
 			
-			//gameManager.challengeSuccess = false;
+			//gameManager.challengeSuccess = true;
+			//grabbed = false;
+			//Cursor.lockState = CursorLockMode.None;
 			if (Input.GetMouseButtonUp(0)){
 				grabbed = false;
+				Cursor.lockState = CursorLockMode.None;
 			}
 		}
     }
