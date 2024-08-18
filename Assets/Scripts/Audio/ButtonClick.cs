@@ -7,6 +7,7 @@ public class ButtonClickManager : MonoBehaviour
      void Start()
     {
        Button[] buttons =  Resources.FindObjectsOfTypeAll<Button>();
+       
 
         foreach (Button button in buttons)
         {
@@ -18,6 +19,7 @@ public class ButtonClickManager : MonoBehaviour
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlaySFX("button_click");
+            Debug.LogWarning("button clicked");
         }
         else
         {

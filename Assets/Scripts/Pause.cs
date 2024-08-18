@@ -4,6 +4,7 @@ public class Pause : MonoBehaviour
 {
 	bool isPaused = false;
 	public GameObject pauseScreen;
+    public GameObject optionsScreen;
 	
     void Update()
     {
@@ -14,6 +15,7 @@ public class Pause : MonoBehaviour
         }
 		else if (Input.GetKeyDown(KeyCode.Escape) && isPaused) {
 			pauseScreen.SetActive(false);
+            optionsScreen.SetActive(false);
 			isPaused = false;
             Time.timeScale = 1f;
         }
