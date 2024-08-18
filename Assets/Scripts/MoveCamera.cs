@@ -7,7 +7,7 @@ public class MoveCamera : MonoBehaviour
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        LeanTween.moveX(gameObject, 500f,6f);
+        
     }
 
     // Update is called once per frame
