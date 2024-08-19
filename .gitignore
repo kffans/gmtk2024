@@ -74,6 +74,9 @@ Packages/
 # Remove information about ProjectSettings
 ProjectSettings/
 
+#Fuck you Morris
+*Fonts/MorrisRoman-Black SDF.asset
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
