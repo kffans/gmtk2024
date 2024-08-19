@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Deathline
   - Enemy
+  - GameManager
   layers:
   - Default
   - TransparentFX
