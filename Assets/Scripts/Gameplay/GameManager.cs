@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 	
 	//sword
 	public GameObject swordHandle;
-	private int swordLevel = 4;
+	private int swordLevel = 0;
 	public GameObject[] swordBlades;
 	public Transform currentSwordBlade;
 	
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 					currentSwordBlade = Instantiate(swordBlades[swordLevel], swordHandle.transform).transform; //create blade
 					Sword.RotateZTo(swordHandle.transform, Sword.swingRotationMin);
 					arms.texture = swordHandle.GetComponent<Sword>().armsTexture[0];
-					//rotate arms too
+					Sword.RotateZTo(arms.GetComponent<Transform>(),0);
 					
 					enemy = Instantiate(enemyData[stage].prefab, enemyParent.transform).transform; //create enemy
 					enemy.name = enemyData[stage].name;

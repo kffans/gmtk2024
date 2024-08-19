@@ -14,7 +14,7 @@ public class Sword : MonoBehaviour
 	public float armsProgress = 0f;
 	public static float swingRotationMin = -130;
 	public static float swingRotationMax = 10;
-	public float ChallengeFactor = 8f;
+	public float ChallengeFactor = 1f;
 	
 	public Texture2D[] armsTexture;
 	
