@@ -8,14 +8,12 @@ public class Pause : MonoBehaviour
 	
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) {
-			Cursor.lockState = CursorLockMode.None;
+        if (Input.GetKeyDown(KeyCode.P) && !isPaused) {
 			pauseScreen.SetActive(true);
 			isPaused = true;
             Time.timeScale = 0f;
         }
-		else if (Input.GetKeyDown(KeyCode.Escape) && isPaused) {
-			Cursor.lockState = CursorLockMode.None;
+		else if (Input.GetKeyDown(KeyCode.P) && isPaused) {
 			pauseScreen.SetActive(false);
             optionsScreen.SetActive(false);
 			isPaused = false;

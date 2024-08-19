@@ -7,8 +7,6 @@ public class Sword : MonoBehaviour
 	
 	public GameManager gameManager;
 	public Transform hand;
-	private Vector3 mousePosPrev = new Vector3(0f,0f,0f);
-	private Vector3 mousePos;
 	public Transform arms;
 	private int armsLevel = 0;
 
@@ -16,8 +14,11 @@ public class Sword : MonoBehaviour
 	public float armsProgress = 0f;
 	public static float swingRotationMin = -130;
 	public static float swingRotationMax = 10;
+	public float ChallengeFactor = 8f;
 	
 	public Texture2D[] armsTexture;
+	
+	public TMPro.TextMeshProUGUI debug;
 	
 	public enum DragState{
 		None,
@@ -29,33 +30,36 @@ public class Sword : MonoBehaviour
 	
 	void Start(){
 		dragState = DragState.None;
+		ChallengeFactor = 8f;
 	}
 
     void Update() {
         if(gameManager.currentPhase == GameManager.Phase.Challenge && !Pause.isPaused){
+			
 			if (Input.GetMouseButtonDown(0)) {
 				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
 				if(hit.collider != null){
 					dragState = DragState.Fresh;
-					Cursor.lockState = CursorLockMode.Locked;
 					hand.gameObject.SetActive(true);
+					if(Input.GetMouseButtonDown(0)){
+						Cursor.lockState = CursorLockMode.Locked;
+					}
 				}
 			}
-			
+			//AudioManager.instance.PlaySFX("button_click");
 			if(dragState == DragState.Fresh){
-				progress+=0.3f;
-				armsProgress+=0.3f;
-
 				RotateZTo(gameObject.transform, swingRotationMin + progress);
 				RotateZTo(arms, armsProgress);
 				
-				mousePos = Input.mousePosition;
-				
-				//Debug.Log(gameObject.transform.rotation.z*180);
+				Vector3 forceVector = Quaternion.Euler(0, 0, (swingRotationMin+progress+90f)) * Vector3.up;
+				forceVector = new Vector3(forceVector.x, forceVector.y,0f);
+				float rotation = (Input.GetAxis("Mouse X")*forceVector.x + Input.GetAxis("Mouse Y")*forceVector.y) * Time.deltaTime * ChallengeFactor;
+				if(progress+rotation > 0){
+					progress+=rotation;
+					armsProgress+=rotation;
+				}
 				
 				hand.position = gameManager.currentSwordBlade.position;
-				
 				
 				//arms image
 				if(progress >= -95 - swingRotationMin && armsLevel==0){ //-75
@@ -73,13 +77,7 @@ public class Sword : MonoBehaviour
 					RotateZTo(arms, armsProgress);
 				}
 				
-
-				if(Input.GetMouseButtonUp(0)){ //if no longer dragging
-					Cursor.lockState = CursorLockMode.None;
-					dragState = DragState.None;
-					hand.gameObject.SetActive(false);
-				}
-				if(progress >= swingRotationMax - swingRotationMin){ //-130 -> 0    winning condition
+				if(progress >= swingRotationMax - swingRotationMin){ //-130 -> 10    winning condition
 					Cursor.lockState = CursorLockMode.None;
 					dragState = DragState.None;
 					hand.gameObject.SetActive(false);
@@ -89,18 +87,8 @@ public class Sword : MonoBehaviour
 					gameManager.challengeSuccess = true;
 				}
 			}
-			
-			
-			
-			//float pullStrength = Mathf.Sqrt( Mathf.Pow(mousePosPrev.x - mousePos.x, 2) + Mathf.Pow(mousePosPrev.y - mousePos.y, 2) );
-			
-			//Debug.Log(mousePos + " ; " + pullStrength + " ; " + mousePosPrev + " ; " + mousePos);
-			//progress = 0f;
-			//mousePosPrev = Vector3(0f,0f,0f);
-			
-			
-			mousePosPrev = mousePos;
 		}
+		
 		if(Pause.isPaused){
 			Cursor.lockState = CursorLockMode.None;
 			dragState = DragState.None;
