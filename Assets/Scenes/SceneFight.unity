@@ -2049,6 +2049,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1390801886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390801887}
+  m_Layer: 5
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1390801887
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390801886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2049327883}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2850, y: -531}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1418239474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,6 +2510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635200618}
+  - component: {fileID: 1635200621}
   - component: {fileID: 1635200620}
   - component: {fileID: 1635200615}
   - component: {fileID: 1635200616}
@@ -2610,6 +2646,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 675227356}
   optionsScreen: {fileID: 556216378}
+--- !u!114 &1635200621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635200614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1edeaefaa137564399b6bc7a8e956c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 1390801886}
+  fakeCursor: {fileID: 5457780207844398213, guid: adb81f99c31acf04a923054d19956f67, type: 3}
+  cam: {fileID: 1765686607}
 --- !u!1 &1665960724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3294,7 @@ RectTransform:
   - {fileID: 163831608}
   - {fileID: 675227357}
   - {fileID: 556216379}
+  - {fileID: 1390801887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
