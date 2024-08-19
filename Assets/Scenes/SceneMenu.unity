@@ -453,9 +453,18 @@ MonoBehaviour:
   musicSource: {fileID: 326450448}
   sfxSource: {fileID: 326450448}
   musicClips:
-  - {fileID: 8300000, guid: 7f6f041d98852324486b1b6f5f2394b9, type: 3}
+  - {fileID: 8300000, guid: 72874fe38a2e6de499ebedfb9202cd0f, type: 3}
+  - {fileID: 8300000, guid: b38c195a153807040aee7d0ab25f90e6, type: 3}
   sfxClips:
   - {fileID: 8300000, guid: 2208e05ff9f911c46918c4f68d0930b7, type: 3}
+  - {fileID: 8300000, guid: b97b516063cd71649a76263f3ab68cc0, type: 3}
+  - {fileID: 8300000, guid: ea6e278386a9ec74b9b2d4f05c29a730, type: 3}
+  - {fileID: 8300000, guid: 543e826ea4772d24d9239005f8e94584, type: 3}
+  - {fileID: 8300000, guid: 80bf7bc9852c520438be16134e1742a1, type: 3}
+  - {fileID: 8300000, guid: c588f6c3b3112a8468b66929c526a629, type: 3}
+  - {fileID: 8300000, guid: b75b4bee90f8e1f4b9656a41b4b0a106, type: 3}
+  - {fileID: 8300000, guid: 1438c30a7636972419b336fc1f066499, type: 3}
+  - {fileID: 8300000, guid: 615135be7a447274188ccf28bb97f7fa, type: 3}
 --- !u!81 &326450447
 AudioListener:
   m_ObjectHideFlags: 0

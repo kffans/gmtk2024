@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] musicClips;  
     public AudioClip[] sfxClips;
 
-    void Start()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        PlayMusic("menu");
+        if (scene.name == "SceneMenu")
+        {
+            PlayMusic("menu");
+        }
+        else if (scene.name == "SceneFight")
+        {
+            PlayMusic("fight");
+        }
     }
+
 
     public void PlayMusicClip(AudioClip clip)
     {
@@ -27,7 +36,8 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded; 
         }
         else
         {
@@ -41,6 +51,7 @@ public class AudioManager : MonoBehaviour
         if (clip != null)
         {
             musicSource.clip = clip;
+            musicSource.loop = true;
             musicSource.Play();
         }
     }
@@ -71,6 +82,11 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.volume = volume;
         sfxSource.volume = volume;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
 }
