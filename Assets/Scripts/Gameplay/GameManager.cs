@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
 	public GameObject[] swordBlades;
 	public Transform currentSwordBlade;
 	
+	//arms
+	public RawImage arms;
+	
 	//enemy and enemy targets
 	public Transform cameraRect;
 	private Transform enemy;
@@ -67,6 +70,9 @@ public class GameManager : MonoBehaviour
 					doneOnceIntro = true;
 					
 					currentSwordBlade = Instantiate(swordBlades[swordLevel], swordHandle.transform).transform; //create blade
+					Sword.RotateZTo(swordHandle.transform, Sword.swingRotationMin);
+					arms.texture = swordHandle.GetComponent<Sword>().armsTexture[0];
+					//rotate arms too
 					
 					enemy = Instantiate(enemyData[stage].prefab, enemyParent.transform).transform; //create enemy
 					enemy.name = enemyData[stage].name;
@@ -127,6 +133,7 @@ public class GameManager : MonoBehaviour
 				if(!doneOncePlayerDeath) {
 					doneOncePlayerDeath = true;
 					
+					Cursor.lockState = CursorLockMode.None;
 					//bell sound and a scream after
 					//music ends
 					gameOverBlackout.SetActive(true);
