@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,18 +22,28 @@ public class GameManager : MonoBehaviour
 		public AnimationCurve curve;
 	}
 	
+	//sword
+	public GameObject swordHandle;
+	private int swordLevel = 4;
+	public GameObject[] swordBlades;
+	public Transform currentSwordBlade;
+	
+	//enemy and enemy targets
 	public Transform cameraRect;
 	private Transform enemy;
 	public GameObject enemyParent;
 	public EnemyData[] enemyData;
 	private Transform targetTransform;
 	
+	//phase, stage and time
 	public Phase currentPhase;
 	private float timeCount = 0f;
 	public int stage = 0;
 	
 	public bool challengeSuccess = false; //whether we succeded in slaying the monster
 	
+	public AnimationCurve introCurve;
+	public TMPro.TextMeshProUGUI enemyText;
 	public float durationIntro = 3f;       bool doneOnceIntro = false;
 	public float durationChallenge = 5f;   bool doneOnceChallenge = false;
 	public float durationEnemyDeath = 3f;  bool doneOnceEnemyDeath = false;
@@ -55,18 +66,20 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceIntro) { //things here are called only once when entering this phase
 					doneOnceIntro = true;
 					
+					currentSwordBlade = Instantiate(swordBlades[swordLevel], swordHandle.transform).transform; //create blade
+					
 					enemy = Instantiate(enemyData[stage].prefab, enemyParent.transform).transform; //create enemy
 					enemy.name = enemyData[stage].name;
 					cameraRect.position = new Vector3(0f,0f,-10f); //reset camera position
 					LeanTween.move(cameraRect.gameObject, new Vector3(enemy.position.x, enemy.position.y, -10), 1f).setEase(LeanTweenType.easeOutQuad);
 					LeanTween.move(cameraRect.gameObject, new Vector3(0f, 0f, -10f), 0.3f).setDelay(3f).setEase(LeanTweenType.easeOutQuad);
 					Camera cam = cameraRect.GetComponent<Camera>();
-					LeanTween.value(cameraRect.gameObject, cam.orthographicSize, enemyData[stage].zoom, 1.6f) //camera zoom
-								.setEase(LeanTweenType.easeOutExpo)
-								.setLoopPingPong()
-								.setRepeat(2)
+					LeanTween.value(cameraRect.gameObject, cam.orthographicSize, enemyData[stage].zoom, 3.3f) //camera zoom
+								.setEase(introCurve)
 								.setOnUpdate((float flt) => {cam.orthographicSize = flt;});
 					durationChallenge = enemyData[stage].durationChallenge;
+					LeanTween.value(enemyText.gameObject, updateEnemyTextColor, new Color(1f,1f,1f,0f), new Color(1f,1f,1f,1f), 2.5f).setEase(introCurve);
+					enemyText.text = enemyData[stage].name;
 				}
 			
 				
@@ -86,6 +99,7 @@ public class GameManager : MonoBehaviour
 				}
 
 				if(challengeSuccess){
+					challengeSuccess = false;
 					timeCount=0f; currentPhase = Phase.EnemyDeath; doneOnceChallenge = false; goto Beginning;
 				}
 					
@@ -114,6 +128,7 @@ public class GameManager : MonoBehaviour
 					doneOncePlayerDeath = true;
 					
 					//bell sound and a scream after
+					//music ends
 					gameOverBlackout.SetActive(true);
 					canvas.SetActive(false);
 					Debug.Log("You've been defeated!");
@@ -133,4 +148,9 @@ public class GameManager : MonoBehaviour
 				break;
 		}
     }
+	
+	
+	void updateEnemyTextColor(Color val){
+		enemyText.color = val;
+	}
 }

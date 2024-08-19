@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneFight.unity
     guid: f25129e9066d05643b398a5a55ed93d7
+  - enabled: 1
+    path: Assets/Scenes/SceneEndCredits.unity
+    guid: e1dd6f8c1cade7f41a299acb39ea4e44
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

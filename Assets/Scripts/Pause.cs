@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-	bool isPaused = false;
+	public static bool isPaused = false;
 	public GameObject pauseScreen;
     public GameObject optionsScreen;
 	
