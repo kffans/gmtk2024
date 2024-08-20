@@ -1224,6 +1224,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675227356}
   m_CullTransparentMesh: 1
+--- !u!1 &680081642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680081643}
+  - component: {fileID: 680081645}
+  - component: {fileID: 680081644}
+  m_Layer: 5
+  m_Name: Grass (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &680081643
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680081642}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2116487993}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2849, y: -555.75}
+  m_SizeDelta: {x: 3206.545, y: 277.1281}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &680081644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680081642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 14749d33e89b20c4a93adb06b2c113d5, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &680081645
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680081642}
+  m_CullTransparentMesh: 1
 --- !u!1 &700377569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,53 +1899,35 @@ MonoBehaviour:
   cameraRect: {fileID: 1635200618}
   enemyParent: {fileID: 1802718924}
   enemyData:
-  - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
-    name: Dragon
-    sfxName: scierwojad
-    durationChallenge: 5
-    challengeFactor: 0.1
+  - prefab: {fileID: 2799921011678216728, guid: cfdc6a67eb1cff14a90bd9c45f61097e, type: 3}
+    name: "Fr\xF6g"
+    sfxName: frog
+    durationChallenge: 200
+    challengeFactor: 1.2
     swordLevelUp: 0
-    sway: {x: 2, y: 3}
-    zoom: 600
-    zoomDisplace: {x: 200, y: 400}
+    sway: {x: 0.1, y: 2}
+    zoom: 100
+    zoomDisplace: {x: 0, y: 50}
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
+        value: -0.0014228821
+        inSlope: 1.0014229
+        outSlope: 1.0014229
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.17628558
-        value: 0.32149455
-        inSlope: -0.008447821
-        outSlope: -0.008447821
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.5582342
-      - serializedVersion: 3
-        time: 0.6916538
-        value: 0.3391855
-        inSlope: 0.004847391
-        outSlope: 0.004847391
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.46680015
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 2.2308521
-        outSlope: 2.2308521
-        tangentMode: 0
+        inSlope: 1.0014229
+        outSlope: 1.0014229
+        tangentMode: 34
         weightedMode: 0
-        inWeight: 0.10825024
+        inWeight: 0.33333334
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -1881,9 +1935,9 @@ MonoBehaviour:
   - prefab: {fileID: 5249783969435395515, guid: 9cd762f4d1c73904e98a2038c9ec4e48, type: 3}
     name: Turnip
     sfxName: plant
-    durationChallenge: 100
-    challengeFactor: 1
-    swordLevelUp: 4
+    durationChallenge: 5
+    challengeFactor: 1.2
+    swordLevelUp: 1
     sway: {x: 3, y: 2}
     zoom: 300
     zoomDisplace: {x: 0, y: 100}
@@ -1938,15 +1992,468 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
-    name: Dragon
-    sfxName: scierwojad
-    durationChallenge: 5
-    challengeFactor: 0.1
+  - prefab: {fileID: 5666935653775171240, guid: 5f851d3e7c4035c46bed386fbf694c1c, type: 3}
+    name: Batt
+    sfxName: bat
+    durationChallenge: 8
+    challengeFactor: 0.7
     swordLevelUp: 0
-    sway: {x: 2, y: 3}
-    zoom: 600
-    zoomDisplace: {x: 200, y: 400}
+    sway: {x: 6, y: 2}
+    zoom: 300
+    zoomDisplace: {x: 0, y: 0}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: 0.7636298
+        outSlope: 0.7636298
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.7565702
+      - serializedVersion: 3
+        time: 0.22847073
+        value: 0.43408006
+        inSlope: 0.37425536
+        outSlope: 0.37425536
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.25436038
+        outWeight: 0.48810592
+      - serializedVersion: 3
+        time: 0.5576569
+        value: 0.5406972
+        inSlope: 0.5220974
+        outSlope: 0.5220974
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.64492977
+      - serializedVersion: 3
+        time: 0.7268187
+        value: 0.7446715
+        inSlope: 0.014431418
+        outSlope: 0.014431418
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.53788096
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 5148503822699374510, guid: 57dc74312722c144595358586ed84971, type: 3}
+    name: Phish
+    sfxName: fish
+    durationChallenge: 6
+    challengeFactor: 0.7
+    swordLevelUp: 0
+    sway: {x: 2, y: 1}
+    zoom: 350
+    zoomDisplace: {x: 100, y: 0}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: -1.0203551
+        outSlope: -1.0203551
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21111113
+      - serializedVersion: 3
+        time: 0.2760272
+        value: 0.24327803
+        inSlope: -0.290558
+        outSlope: -0.290558
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.67906463
+      - serializedVersion: 3
+        time: 0.5576569
+        value: 0.5406972
+        inSlope: -0.22801118
+        outSlope: -0.22801118
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7039969
+      - serializedVersion: 3
+        time: 0.82435286
+        value: 0.6891753
+        inSlope: -0.14547864
+        outSlope: -0.14547864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 6450847836308245750, guid: 29da75d3d7d4b5a45bd2cbb0a8006f9f, type: 3}
+    name: Hare
+    sfxName: rabbit-axe
+    durationChallenge: 3
+    challengeFactor: 0.7
+    swordLevelUp: 1
+    sway: {x: 5, y: 1}
+    zoom: 250
+    zoomDisplace: {x: 0, y: 200}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: 0.7633558
+        outSlope: 0.7633558
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.1932559
+        value: 0.22441816
+        inSlope: -1.0655357
+        outSlope: -1.0655357
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33602366
+      - serializedVersion: 3
+        time: 0.40980878
+        value: 0.38570178
+        inSlope: -2.3851042
+        outSlope: -2.3851042
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33503985
+      - serializedVersion: 3
+        time: 0.55478823
+        value: 0.5424062
+        inSlope: -2.1661353
+        outSlope: -2.1661353
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.195197
+      - serializedVersion: 3
+        time: 0.82435286
+        value: 0.6891753
+        inSlope: -1.8656847
+        outSlope: -1.8656847
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.4932181
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2437182249086994885, guid: 06b11955cae0d674c8e1ec05fac8f062, type: 3}
+    name: Kat
+    sfxName: cat-markiplier
+    durationChallenge: 6
+    challengeFactor: 0.4
+    swordLevelUp: 0
+    sway: {x: 0, y: 2}
+    zoom: 350
+    zoomDisplace: {x: 0, y: 100}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.008342743
+        value: -0.0014228821
+        inSlope: 0.12462186
+        outSlope: 0.12462186
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.77131605
+      - serializedVersion: 3
+        time: 0.648212
+        value: 0.0005829632
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.6528567
+        value: 0.0018701479
+        inSlope: -0.10839433
+        outSlope: -0.10839433
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.19138974
+        outWeight: 0.4934136
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: -1.2234917
+        outSlope: -1.2234917
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.15002915
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2296583723091544568, guid: 2aeb4db5542aa14478a68028023b1468, type: 3}
+    name: "H\xE4nd"
+    sfxName: hand
+    durationChallenge: 4
+    challengeFactor: 0.4
+    swordLevelUp: 0
+    sway: {x: 5, y: 1}
+    zoom: 350
+    zoomDisplace: {x: 50, y: 150}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: -1.0203551
+        outSlope: -1.0203551
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21111113
+      - serializedVersion: 3
+        time: 0.2760272
+        value: 0.24327803
+        inSlope: -0.290558
+        outSlope: -0.290558
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.67906463
+      - serializedVersion: 3
+        time: 0.5576569
+        value: 0.5406972
+        inSlope: -0.22801118
+        outSlope: -0.22801118
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7039969
+      - serializedVersion: 3
+        time: 0.82435286
+        value: 0.6891753
+        inSlope: -0.14547864
+        outSlope: -0.14547864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 6560136819002788086, guid: ac8b5ad4c605ed5468d3fe405c49df04, type: 3}
+    name: Slizard
+    sfxName: snake
+    durationChallenge: 6
+    challengeFactor: 0.4
+    swordLevelUp: 0
+    sway: {x: 3, y: 2}
+    zoom: 300
+    zoomDisplace: {x: 0, y: 100}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: -1.0203551
+        outSlope: -1.0203551
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21111113
+      - serializedVersion: 3
+        time: 0.2760272
+        value: 0.24327803
+        inSlope: -0.290558
+        outSlope: -0.290558
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.67906463
+      - serializedVersion: 3
+        time: 0.5576569
+        value: 0.5406972
+        inSlope: -0.22801118
+        outSlope: -0.22801118
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7039969
+      - serializedVersion: 3
+        time: 0.82435286
+        value: 0.6891753
+        inSlope: -0.14547864
+        outSlope: -0.14547864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2639353028947120572, guid: b1e2e1b7c89ba4042b97a7946a78b918, type: 3}
+    name: "G\xF6t"
+    sfxName: goat
+    durationChallenge: 5
+    challengeFactor: 0.3
+    swordLevelUp: 0
+    sway: {x: 100, y: 0.3}
+    zoom: 400
+    zoomDisplace: {x: 0, y: 0}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2462432050904625955, guid: 2c4e9531cb2b2ff4b88298937c093fe2, type: 3}
+    name: Fishlegs
+    sfxName: silence
+    durationChallenge: 4
+    challengeFactor: 0.3
+    swordLevelUp: 1
+    sway: {x: 3, y: 2}
+    zoom: 380
+    zoomDisplace: {x: 0, y: 200}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: -1.0203551
+        outSlope: -1.0203551
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21111113
+      - serializedVersion: 3
+        time: 0.2760272
+        value: 0.24327803
+        inSlope: -0.290558
+        outSlope: -0.290558
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.67906463
+      - serializedVersion: 3
+        time: 0.5576569
+        value: 0.5406972
+        inSlope: -0.22801118
+        outSlope: -0.22801118
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7039969
+      - serializedVersion: 3
+        time: 0.82435286
+        value: 0.6891753
+        inSlope: -0.14547864
+        outSlope: -0.14547864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2087841400641462409, guid: 72361515c10710940ba189b37b3828f9, type: 3}
+    name: Serpentlegs
+    sfxName: pterodaktyl
+    durationChallenge: 7
+    challengeFactor: 0.2
+    swordLevelUp: 0
+    sway: {x: 3, y: 0.5}
+    zoom: 450
+    zoomDisplace: {x: 80, y: 250}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -1960,31 +2467,316 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.17628558
-        value: 0.32149455
-        inSlope: -0.008447821
-        outSlope: -0.008447821
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.5582342
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 8160498413043814213, guid: ee1264fad51e8ed48857fbac3ada8dbc, type: 3}
+    name: Vulpis
+    sfxName: maybe-hyenna
+    durationChallenge: 6
+    challengeFactor: 0.2
+    swordLevelUp: 0
+    sway: {x: 0.5, y: 2}
+    zoom: 450
+    zoomDisplace: {x: 50, y: 300}
+    curve:
+      serializedVersion: 2
+      m_Curve:
       - serializedVersion: 3
-        time: 0.6916538
-        value: 0.3391855
-        inSlope: 0.004847391
-        outSlope: 0.004847391
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.8760594
+        value: 0.41875118
+        inSlope: 1.323786
+        outSlope: 1.323786
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.46680015
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 2.2308521
-        outSlope: 2.2308521
+        inSlope: 2
+        outSlope: 2
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.10825024
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 2795528414502091368, guid: 0892a36239d04f64c80dd57f13569782, type: 3}
+    name: Basilisk
+    sfxName: hen-cock
+    durationChallenge: 7
+    challengeFactor: 0.2
+    swordLevelUp: 0
+    sway: {x: 3, y: 2}
+    zoom: 500
+    zoomDisplace: {x: 50, y: 300}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0002822876
+        inSlope: -1.0203551
+        outSlope: -1.0203551
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21111113
+      - serializedVersion: 3
+        time: 0.09245634
+        value: 0.2416606
+        inSlope: -0.09141856
+        outSlope: -0.09141856
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.78252155
+      - serializedVersion: 3
+        time: 0.29621443
+        value: 0.23913777
+        inSlope: -0.034920767
+        outSlope: -0.034920767
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.40159285
+        value: 0.46986073
+        inSlope: -0.14547864
+        outSlope: -0.14547864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.58489144
+        value: 0.47323245
+        inSlope: 0.008987611
+        outSlope: 0.008987611
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.5140327
+      - serializedVersion: 3
+        time: 0.74422896
+        value: 0.69718194
+        inSlope: -0.03136599
+        outSlope: -0.03136599
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.62131345
+      - serializedVersion: 3
+        time: 0.86866045
+        value: 0.71330845
+        inSlope: -0.1379306
+        outSlope: -0.1379306
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.9032653
+      - serializedVersion: 3
+        time: 1.001297
+        value: 0.99923706
+        inSlope: -1.3626791
+        outSlope: -1.3626791
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.99029386
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 5736963987121772338, guid: 03c78b7be85d04c468fd51aeb9383495, type: 3}
+    name: Unicorn
+    sfxName: unicorn-1
+    durationChallenge: 11
+    challengeFactor: 0.1
+    swordLevelUp: 1
+    sway: {x: 6, y: 3}
+    zoom: 550
+    zoomDisplace: {x: 80, y: 350}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.339717
+        outSlope: 0.339717
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13714346
+        value: 0.046589967
+        inSlope: 1.022382
+        outSlope: 1.022382
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.5859211
+      - serializedVersion: 3
+        time: 0.35879287
+        value: 0.15118131
+        inSlope: 0.7923753
+        outSlope: 0.7923753
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5616144
+        value: 0.37689596
+        inSlope: 0.039553877
+        outSlope: 0.039553877
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.4192556
+      - serializedVersion: 3
+        time: 0.8066499
+        value: 0.65931517
+        inSlope: -0.09229856
+        outSlope: -0.09229856
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.95368004
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1.7620103
+        outSlope: 1.7620103
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
+    name: Dragon
+    sfxName: scierwojad
+    durationChallenge: 9
+    challengeFactor: 0.04
+    swordLevelUp: 0
+    sway: {x: 2, y: 4}
+    zoom: 600
+    zoomDisplace: {x: 0, y: 400}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1.158652
+        outSlope: 1.158652
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.11214194
+        value: 0.12993348
+        inSlope: 0.03038816
+        outSlope: 0.03038816
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.70532554
+      - serializedVersion: 3
+        time: 0.23934537
+        value: 0.12916872
+        inSlope: -0.024831498
+        outSlope: -0.024831498
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7328881
+      - serializedVersion: 3
+        time: 0.35884035
+        value: 0.3313027
+        inSlope: 0.022828588
+        outSlope: 0.022828588
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.7378325
+      - serializedVersion: 3
+        time: 0.50330293
+        value: 0.3331562
+        inSlope: -0.024833864
+        outSlope: -0.024833864
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.70609087
+      - serializedVersion: 3
+        time: 0.5812271
+        value: 0.49675065
+        inSlope: -0.08355001
+        outSlope: -0.08355001
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6983278
+        value: 0.49578673
+        inSlope: 0.030812364
+        outSlope: 0.030812364
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.95368004
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.8037529
+        value: 0.79666317
+        inSlope: 0.0126136895
+        outSlope: 0.0126136895
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.8323474
+      - serializedVersion: 3
+        time: 0.8760869
+        value: 0.79623604
+        inSlope: -0.010794024
+        outSlope: -0.010794024
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1
+        value: 0.99842834
+        inSlope: 0.58653367
+        outSlope: 0.58653367
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -4299,6 +5091,7 @@ RectTransform:
   - {fileID: 127534347}
   - {fileID: 109739601}
   - {fileID: 2079996196}
+  - {fileID: 680081643}
   m_Father: {fileID: 1379089664}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
