@@ -423,6 +423,8 @@ MonoBehaviour:
   musicClips:
   - {fileID: 8300000, guid: 72874fe38a2e6de499ebedfb9202cd0f, type: 3}
   - {fileID: 8300000, guid: b38c195a153807040aee7d0ab25f90e6, type: 3}
+  - {fileID: 8300000, guid: a6fb367d9e0668c4db3baebebf0ff9d3, type: 3}
+  - {fileID: 8300000, guid: 789e46590b0630f419aa3460f37b6cd4, type: 3}
   sfxClips:
   - {fileID: 8300000, guid: 2208e05ff9f911c46918c4f68d0930b7, type: 3}
   - {fileID: 8300000, guid: b97b516063cd71649a76263f3ab68cc0, type: 3}

@@ -141,13 +141,12 @@ public class GameManager : MonoBehaviour
 			case Phase.PlayerDeath:
 				if(!doneOncePlayerDeath) {
 					doneOncePlayerDeath = true;
+					Debug.Log("You've been defeated!");
 					
-					Cursor.lockState = CursorLockMode.None;
 					//bell sound and a scream after
-					//music ends
+					AudioManager.instance.PlayMusic("silence");
 					gameOverBlackout.SetActive(true);
 					canvas.SetActive(false);
-					Debug.Log("You've been defeated!");
 				}
 				
 				
@@ -159,10 +158,11 @@ public class GameManager : MonoBehaviour
 			case Phase.Win:
 				if(!doneOnceWin) {
 					doneOnceWin = true;
+					Debug.Log("You've won!");
 					
 					//play cheer music on, load end credits scene
+					AudioManager.instance.PlayMusic("credits");
 					SceneManager.LoadScene(2); 
-					Debug.Log("You've won!");
 				}
 				
 				break;
