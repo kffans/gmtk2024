@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 	{
 		public GameObject prefab;
 		public string name;
+		public string sfxName;
 		public float durationChallenge;
 		public float challengeFactor;
 		public int swordLevelUp;
@@ -82,7 +83,7 @@ public class GameManager : MonoBehaviour
 		durationIntro = 3f;
 		durationEnemyDeath = 4f;
 		durationPlayerDeath = 5f;
-		durationSwordGrow = 3f;
+		durationSwordGrow = 0f;
 		durationWin = 6f;
 		AudioManager.instance.PlayMusic("fight");
     }
@@ -99,6 +100,7 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceIntro) { //things here are called only once when entering this phase
 					doneOnceIntro = true;
 					
+					AudioManager.instance.PlaySFX(enemyData[stage].sfxName);
 					Sword.ChallengeFactor = enemyData[stage].challengeFactor;
 					currentSwordBlade = Instantiate(swordBlades[swordLevel], swordHandle.transform).transform; //create blade
 					Sword.RotateZTo(swordHandle.transform, Sword.swingRotationMin);
@@ -162,8 +164,9 @@ public class GameManager : MonoBehaviour
 				
 				if(timeCount < durationEnemyDeath) { timeCount += Time.deltaTime; }
 				else { 
+					timeCount=0f; currentPhase = Phase.Intro;
 					if(enemyData[stage-1].swordLevelUp>0) currentPhase = Phase.SwordGrow;
-					timeCount=0f; currentPhase = Phase.Intro; doneOnceEnemyDeath = false; goto Beginning;
+					doneOnceEnemyDeath = false; goto Beginning;
 				}
 				break;
 				
@@ -191,8 +194,9 @@ public class GameManager : MonoBehaviour
 			case Phase.SwordGrow:
 				if(!doneOnceSwordGrow) {
 					doneOnceSwordGrow = true;
-					
+					Debug.Log("aa");
 					//camera to different place to show blade
+					//cameraRect.position = new Vector3(0f,0f,-10f); //reset camera position
 				}
 				
 				if(timeCount < durationSwordGrow) { timeCount += Time.deltaTime; }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5020469506557060971
+--- !u!1 &6560136819002788086
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9112151390212386450}
-  - component: {fileID: 802441306140894101}
-  - component: {fileID: 7741740287280329605}
+  - component: {fileID: 8581497124556597784}
+  - component: {fileID: 1149847581276317112}
+  - component: {fileID: 4061172829568821650}
   m_Layer: 5
-  m_Name: Dragon
+  m_Name: Slizard
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &9112151390212386450
+--- !u!224 &8581497124556597784
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5020469506557060971}
+  m_GameObject: {fileID: 6560136819002788086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,24 +34,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1476, y: -240}
-  m_SizeDelta: {x: 1000, y: 1000}
-  m_Pivot: {x: 0.5, y: 0.3}
---- !u!222 &802441306140894101
+  m_AnchoredPosition: {x: -370.4, y: -390.76}
+  m_SizeDelta: {x: 691.6289, y: 308.88}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &1149847581276317112
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5020469506557060971}
+  m_GameObject: {fileID: 6560136819002788086}
   m_CullTransparentMesh: 1
---- !u!114 &7741740287280329605
+--- !u!114 &4061172829568821650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5020469506557060971}
+  m_GameObject: {fileID: 6560136819002788086}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 8b7ab32134065c2478156f9840179691, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1d0301a1fac4bb54dac70c3009ee4df9, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

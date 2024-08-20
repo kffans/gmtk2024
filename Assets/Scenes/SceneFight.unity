@@ -326,6 +326,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109739600}
   m_CullTransparentMesh: 1
+--- !u!1 &127534346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127534347}
+  - component: {fileID: 127534349}
+  - component: {fileID: 127534348}
+  m_Layer: 5
+  m_Name: Grass (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &127534347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534346}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2116487993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2752.94, y: -378}
+  m_SizeDelta: {x: 3206.545, y: 277.1281}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &127534348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 14749d33e89b20c4a93adb06b2c113d5, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &127534349
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534346}
+  m_CullTransparentMesh: 1
 --- !u!1 &135907826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1224,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675227356}
   m_CullTransparentMesh: 1
+--- !u!1 &700377569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 700377570}
+  - component: {fileID: 700377572}
+  - component: {fileID: 700377571}
+  m_Layer: 5
+  m_Name: Sky (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &700377570
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700377569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2116487993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2945, y: 76}
+  m_SizeDelta: {x: 3720, y: 958.3813}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &700377571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700377569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: c6006536532cfcc4492c817cc037e62d, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &700377572
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700377569}
+  m_CullTransparentMesh: 1
 --- !u!1 &735116251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,8 +1827,60 @@ MonoBehaviour:
   cameraRect: {fileID: 1635200618}
   enemyParent: {fileID: 1802718924}
   enemyData:
+  - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
+    name: Dragon
+    sfxName: scierwojad
+    durationChallenge: 5
+    challengeFactor: 0.1
+    swordLevelUp: 0
+    sway: {x: 2, y: 3}
+    zoom: 600
+    zoomDisplace: {x: 200, y: 400}
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.17628558
+        value: 0.32149455
+        inSlope: -0.008447821
+        outSlope: -0.008447821
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.5582342
+      - serializedVersion: 3
+        time: 0.6916538
+        value: 0.3391855
+        inSlope: 0.004847391
+        outSlope: 0.004847391
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.46680015
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2.2308521
+        outSlope: 2.2308521
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.10825024
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   - prefab: {fileID: 5249783969435395515, guid: 9cd762f4d1c73904e98a2038c9ec4e48, type: 3}
     name: Turnip
+    sfxName: plant
     durationChallenge: 100
     challengeFactor: 1
     swordLevelUp: 4
@@ -1744,6 +1940,7 @@ MonoBehaviour:
       m_RotationOrder: 4
   - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
     name: Dragon
+    sfxName: scierwojad
     durationChallenge: 5
     challengeFactor: 0.1
     swordLevelUp: 0
@@ -4098,6 +4295,8 @@ RectTransform:
   m_Children:
   - {fileID: 746621370}
   - {fileID: 2031244153}
+  - {fileID: 700377570}
+  - {fileID: 127534347}
   - {fileID: 109739601}
   - {fileID: 2079996196}
   m_Father: {fileID: 1379089664}
