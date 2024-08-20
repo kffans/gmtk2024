@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
 	public Texture2D cursorImage;
 	
 	void Start(){
+		AudioManager.instance.PlayMusic("menu");
 		//move background
 		LeanTween.moveX(bg, 200f, 5f).setLoopPingPong().setEase(LeanTweenType.easeOutQuad).setRepeat(-1);
 		//sets cursor image

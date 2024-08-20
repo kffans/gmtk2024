@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 		Challenge,
 		EnemyDeath,
 		PlayerDeath,
+		SwordGrow,
 		Win
 	}
 	
@@ -19,7 +20,11 @@ public class GameManager : MonoBehaviour
 		public GameObject prefab;
 		public string name;
 		public float durationChallenge;
+		public float challengeFactor;
+		public int swordLevelUp;
+		public Vector2 sway;  //X - range of sway rotation, Y - duration of sway
 		public float zoom;
+		public Vector2 zoomDisplace;
 		public AnimationCurve curve;
 	}
 	
@@ -50,11 +55,13 @@ public class GameManager : MonoBehaviour
 	public bool challengeSuccess = false; //whether we succeded in slaying the monster
 	
 	public AnimationCurve introCurve;
+	public AnimationCurve enemySway;
 	public TMPro.TextMeshProUGUI enemyText;
 	public float durationIntro = 3f;       bool doneOnceIntro = false;
 	public float durationChallenge = 5f;   bool doneOnceChallenge = false;
-	public float durationEnemyDeath = 3f;  bool doneOnceEnemyDeath = false;
+	public float durationEnemyDeath = 4f;  bool doneOnceEnemyDeath = false;
 	public float durationPlayerDeath = 5f; bool doneOncePlayerDeath = false;
+	public float durationSwordGrow = 3f;   bool doneOnceSwordGrow = false;
 	public float durationWin = 5f; 		   bool doneOnceWin = false;
 	
 	public GameObject canvas;
@@ -72,8 +79,12 @@ public class GameManager : MonoBehaviour
 	
     void Start() {
 		currentPhase = Phase.Intro;
+		durationIntro = 3f;
+		durationEnemyDeath = 4f;
 		durationPlayerDeath = 5f;
+		durationSwordGrow = 3f;
 		durationWin = 6f;
+		AudioManager.instance.PlayMusic("fight");
     }
 
     void Update() {
@@ -88,6 +99,7 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceIntro) { //things here are called only once when entering this phase
 					doneOnceIntro = true;
 					
+					Sword.ChallengeFactor = enemyData[stage].challengeFactor;
 					currentSwordBlade = Instantiate(swordBlades[swordLevel], swordHandle.transform).transform; //create blade
 					Sword.RotateZTo(swordHandle.transform, Sword.swingRotationMin);
 					arms.texture = swordHandle.GetComponent<Sword>().armsTexture[0];
@@ -96,7 +108,7 @@ public class GameManager : MonoBehaviour
 					enemy = Instantiate(enemyData[stage].prefab, enemyParent.transform).transform; //create enemy
 					enemy.name = enemyData[stage].name;
 					cameraRect.position = new Vector3(0f,0f,-10f); //reset camera position
-					LeanTween.move(cameraRect.gameObject, new Vector3(enemy.position.x, enemy.position.y, -10), 1f).setEase(LeanTweenType.easeOutQuad);
+					LeanTween.move(cameraRect.gameObject, new Vector3(enemy.position.x+enemyData[stage].zoomDisplace.x, enemy.position.y+enemyData[stage].zoomDisplace.y, -10), 1f).setEase(LeanTweenType.easeOutQuad);
 					LeanTween.move(cameraRect.gameObject, new Vector3(0f, 0f, -10f), 0.3f).setDelay(3f).setEase(LeanTweenType.easeOutQuad);
 					Camera cam = cameraRect.GetComponent<Camera>();
 					LeanTween.value(cameraRect.gameObject, cam.orthographicSize, enemyData[stage].zoom, 3.3f) //camera zoom
@@ -119,6 +131,7 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceChallenge) {
 					doneOnceChallenge = true;
 					
+					LeanTween.rotateZ(enemy.gameObject,enemyData[stage].sway.x,enemyData[stage].sway.y).setEase(enemySway).setLoopPingPong().setRepeat(-1);
 					targetTransform = GameObject.FindGameObjectsWithTag("Deathline")[0].transform;
 					LeanTween.moveX(enemy.gameObject, targetTransform.position.x, durationChallenge).setEase(enemyData[stage].curve);
 				}
@@ -137,6 +150,10 @@ public class GameManager : MonoBehaviour
 				if(!doneOnceEnemyDeath) {
 					doneOnceEnemyDeath = true;
 					
+					if(enemyData[stage].swordLevelUp>0){ //level up miecza
+						swordLevel += enemyData[stage].swordLevelUp;
+					}
+					
 					if(enemyData.Length == stage+1){
 						timeCount=0f; currentPhase = Phase.Win; doneOnceEnemyDeath = false; goto Beginning;
 					}
@@ -144,7 +161,10 @@ public class GameManager : MonoBehaviour
 				}
 				
 				if(timeCount < durationEnemyDeath) { timeCount += Time.deltaTime; }
-				else { timeCount=0f; currentPhase = Phase.Intro; doneOnceEnemyDeath = false; goto Beginning;}
+				else { 
+					if(enemyData[stage-1].swordLevelUp>0) currentPhase = Phase.SwordGrow;
+					timeCount=0f; currentPhase = Phase.Intro; doneOnceEnemyDeath = false; goto Beginning;
+				}
 				break;
 				
 				
@@ -165,6 +185,18 @@ public class GameManager : MonoBehaviour
 				
 				if(timeCount < durationPlayerDeath) { timeCount += Time.deltaTime; }
 				else { SceneManager.LoadScene(0); }
+				break;
+				
+				
+			case Phase.SwordGrow:
+				if(!doneOnceSwordGrow) {
+					doneOnceSwordGrow = true;
+					
+					//camera to different place to show blade
+				}
+				
+				if(timeCount < durationSwordGrow) { timeCount += Time.deltaTime; }
+				else { timeCount=0f; currentPhase = Phase.Intro; doneOnceSwordGrow = false; goto Beginning; }
 				break;
 				
 				
