@@ -34,7 +34,7 @@ public class Sword : MonoBehaviour
 	}
 
     void Update() {
-        if(gameManager.currentPhase == GameManager.Phase.Challenge && !Pause.isPaused){
+        if(gameManager.currentPhase == GameManager.Phase.Challenge){
 			
 			if (Input.GetMouseButtonDown(0)) {
 				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -43,11 +43,13 @@ public class Sword : MonoBehaviour
 					hand.gameObject.SetActive(true);
 					if(Input.GetMouseButtonDown(0)){
 						Cursor.lockState = CursorLockMode.Locked;
+						Cursor.visible = false;
 					}
 				}
 			}
 			//AudioManager.instance.PlaySFX("button_click");
 			if(dragState == DragState.Fresh){
+				hand.gameObject.SetActive(true);
 				RotateZTo(gameObject.transform, swingRotationMin + progress);
 				RotateZTo(arms, armsProgress);
 				
@@ -78,21 +80,12 @@ public class Sword : MonoBehaviour
 				}
 				
 				if(progress >= swingRotationMax - swingRotationMin){ //-130 -> 10    winning condition
-					Cursor.lockState = CursorLockMode.None;
-					dragState = DragState.None;
 					hand.gameObject.SetActive(false);
-					
 					armsLevel=0;
 					progress=0f;
 					gameManager.challengeSuccess = true;
 				}
 			}
-		}
-		
-		if(Pause.isPaused){
-			Cursor.lockState = CursorLockMode.None;
-			dragState = DragState.None;
-			hand.gameObject.SetActive(false);
 		}
     }
 	

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class GameManager : MonoBehaviour
 		public float zoom;
 		public AnimationCurve curve;
 	}
+	
+	//cursor
+	public Texture2D cursorPointer;
 	
 	//sword
 	public GameObject swordHandle;
@@ -50,7 +54,7 @@ public class GameManager : MonoBehaviour
 	public float durationIntro = 3f;       bool doneOnceIntro = false;
 	public float durationChallenge = 5f;   bool doneOnceChallenge = false;
 	public float durationEnemyDeath = 3f;  bool doneOnceEnemyDeath = false;
-	public float durationPlayerDeath = 0f; bool doneOncePlayerDeath = false;
+	public float durationPlayerDeath = 4f; bool doneOncePlayerDeath = false;
 	public float durationWin = 0f; 		   bool doneOnceWin = false;
 	
 	public GameObject gameOverBlackout;
@@ -63,6 +67,11 @@ public class GameManager : MonoBehaviour
     }
 
     void Update() {
+		if(Input.GetKeyDown(KeyCode.Q)){
+			Cursor.lockState = CursorLockMode.None;
+			SceneManager.LoadScene(0); 
+		}
+		
 	Beginning:
         switch(currentPhase){
 			case Phase.Intro:
@@ -141,6 +150,9 @@ public class GameManager : MonoBehaviour
 					Debug.Log("You've been defeated!");
 				}
 				
+				
+				if(timeCount < durationPlayerDeath) { timeCount += Time.deltaTime; }
+				else { SceneManager.LoadScene(0); }
 				break;
 				
 				
@@ -149,6 +161,7 @@ public class GameManager : MonoBehaviour
 					doneOnceWin = true;
 					
 					//play cheer music on, load end credits scene
+					SceneManager.LoadScene(2); 
 					Debug.Log("You've won!");
 				}
 				

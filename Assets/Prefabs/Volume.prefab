@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089247094912192603}
   - component: {fileID: 8247108478651657126}
-  - component: {fileID: 2231079088654099678}
+  - component: {fileID: 5538711491517545556}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -178,7 +178,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2231079088654099678
+--- !u!114 &5538711491517545556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d2ab4d4deaee1fa4a8146d5120e5f5c7
+guid: 2b792a194c1876843af5e1a3be7ad3da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8784844329768798039
-    second: grab_0
+      213: 79668742304990745
+    second: ribbon_button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -74,10 +74,10 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grab_0
+      name: ribbon_button_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 75
         y: 0
-        width: 101
-        height: 116
+        width: 1552
+        height: 681
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75749f2bf590ae970800000000000000
-      internalID: 8784844329768798039
+      spriteID: 9168acc8c4a0b1100800000000000000
+      internalID: 79668742304990745
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      grab_0: 8784844329768798039
+      ribbon_button_0: 79668742304990745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
