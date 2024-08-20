@@ -1936,7 +1936,7 @@ MonoBehaviour:
     name: Turnip
     sfxName: plant
     durationChallenge: 5
-    challengeFactor: 1.2
+    challengeFactor: 1
     swordLevelUp: 1
     sway: {x: 3, y: 2}
     zoom: 300
@@ -2056,7 +2056,7 @@ MonoBehaviour:
     name: Phish
     sfxName: fish
     durationChallenge: 6
-    challengeFactor: 0.7
+    challengeFactor: 0.6
     swordLevelUp: 0
     sway: {x: 2, y: 1}
     zoom: 350
@@ -2116,7 +2116,7 @@ MonoBehaviour:
     name: Hare
     sfxName: rabbit-axe
     durationChallenge: 3
-    challengeFactor: 0.7
+    challengeFactor: 0.6
     swordLevelUp: 1
     sway: {x: 5, y: 1}
     zoom: 250
@@ -2296,7 +2296,7 @@ MonoBehaviour:
     name: Slizard
     sfxName: snake
     durationChallenge: 6
-    challengeFactor: 0.4
+    challengeFactor: 0.3
     swordLevelUp: 0
     sway: {x: 3, y: 2}
     zoom: 300
@@ -2356,7 +2356,7 @@ MonoBehaviour:
     name: "G\xF6t"
     sfxName: goat
     durationChallenge: 5
-    challengeFactor: 0.3
+    challengeFactor: 0.2
     swordLevelUp: 0
     sway: {x: 100, y: 0.3}
     zoom: 400
@@ -2389,7 +2389,7 @@ MonoBehaviour:
     name: Fishlegs
     sfxName: silence
     durationChallenge: 4
-    challengeFactor: 0.3
+    challengeFactor: 0.2
     swordLevelUp: 1
     sway: {x: 3, y: 2}
     zoom: 380
@@ -2449,7 +2449,7 @@ MonoBehaviour:
     name: Serpentlegs
     sfxName: pterodaktyl
     durationChallenge: 7
-    challengeFactor: 0.2
+    challengeFactor: 0.1
     swordLevelUp: 0
     sway: {x: 3, y: 0.5}
     zoom: 450
@@ -2482,7 +2482,7 @@ MonoBehaviour:
     name: Vulpis
     sfxName: maybe-hyenna
     durationChallenge: 6
-    challengeFactor: 0.2
+    challengeFactor: 0.1
     swordLevelUp: 0
     sway: {x: 0.5, y: 2}
     zoom: 450
@@ -2524,7 +2524,7 @@ MonoBehaviour:
     name: Basilisk
     sfxName: hen-cock
     durationChallenge: 7
-    challengeFactor: 0.2
+    challengeFactor: 0.08
     swordLevelUp: 0
     sway: {x: 3, y: 2}
     zoom: 500
@@ -2611,7 +2611,7 @@ MonoBehaviour:
     name: Unicorn
     sfxName: unicorn-1
     durationChallenge: 11
-    challengeFactor: 0.1
+    challengeFactor: 0.06
     swordLevelUp: 1
     sway: {x: 6, y: 3}
     zoom: 550
@@ -2680,7 +2680,7 @@ MonoBehaviour:
     name: Dragon
     sfxName: scierwojad
     durationChallenge: 9
-    challengeFactor: 0.04
+    challengeFactor: 0.02
     swordLevelUp: 0
     sway: {x: 2, y: 4}
     zoom: 600
