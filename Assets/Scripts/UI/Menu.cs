@@ -6,9 +6,19 @@ public class Menu : MonoBehaviour
     #nullable enable
 	public GameObject? menuCanvas;
     public GameObject? optionsCanvas;
-    public GameObject? creditsCanvas;
 	#nullable disable
-
+	public GameObject bg;
+	public Texture2D cursorImage;
+	
+	void Start(){
+		//move background
+		LeanTween.moveX(bg, 200f, 5f).setLoopPingPong().setEase(LeanTweenType.easeOutQuad).setRepeat(-1);
+		//sets cursor image
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.SetCursor(cursorImage, new Vector2(20f,0f), CursorMode.ForceSoftware);
+	}
+	
     public void LoadLevel(string level)
     {
         Time.timeScale = 1f;
@@ -25,27 +35,23 @@ public class Menu : MonoBehaviour
     {
         menuCanvas.SetActive(false);
         optionsCanvas.SetActive(true);
-        creditsCanvas.SetActive(false);
     }
 
     public void QuitOptions()
     {
         menuCanvas.SetActive(true);
         optionsCanvas.SetActive(false);
-        creditsCanvas.SetActive(false);
     }
 
     public void OpenCredits()
     {
         menuCanvas.SetActive(false);
         optionsCanvas.SetActive(false);
-        creditsCanvas.SetActive(true);
     }
 
     public void QuitCredits()
     {
         menuCanvas.SetActive(true);
         optionsCanvas.SetActive(false);
-        creditsCanvas.SetActive(false);
     }
 }
