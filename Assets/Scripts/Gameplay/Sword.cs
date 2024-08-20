@@ -30,7 +30,7 @@ public class Sword : MonoBehaviour
 	
 	void Start(){
 		dragState = DragState.None;
-		ChallengeFactor = 8f;
+		ChallengeFactor = 50f;
 	}
 
     void Update() {

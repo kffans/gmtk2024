@@ -54,16 +54,26 @@ public class GameManager : MonoBehaviour
 	public float durationIntro = 3f;       bool doneOnceIntro = false;
 	public float durationChallenge = 5f;   bool doneOnceChallenge = false;
 	public float durationEnemyDeath = 3f;  bool doneOnceEnemyDeath = false;
-	public float durationPlayerDeath = 4f; bool doneOncePlayerDeath = false;
-	public float durationWin = 0f; 		   bool doneOnceWin = false;
+	public float durationPlayerDeath = 5f; bool doneOncePlayerDeath = false;
+	public float durationWin = 5f; 		   bool doneOnceWin = false;
+	
+	public GameObject canvas;
 	
 	public GameObject gameOverBlackout;
-	public GameObject canvas;
+	public TMPro.TextMeshProUGUI gameOverText;
+	public Color gameOverTextColor;
+	
+	public GameObject gameWonBlackout;
+	public TMPro.TextMeshProUGUI gameWonText;
+	public Color gameWonTextColor;
+	
 	
 	
 	
     void Start() {
 		currentPhase = Phase.Intro;
+		durationPlayerDeath = 5f;
+		durationWin = 6f;
     }
 
     void Update() {
@@ -143,9 +153,12 @@ public class GameManager : MonoBehaviour
 					doneOncePlayerDeath = true;
 					Debug.Log("You've been defeated!");
 					
+					
 					//bell sound and a scream after
 					AudioManager.instance.PlayMusic("silence");
+					AudioManager.instance.PlaySFX("death_with_bells");
 					gameOverBlackout.SetActive(true);
+					LeanTween.value(gameOverText.gameObject, updateGameOverTextColor, new Color(0f,0f,0f,0f), gameOverTextColor, 3.5f).setEase(introCurve).setDelay(1.5f);
 					canvas.SetActive(false);
 				}
 				
@@ -162,9 +175,13 @@ public class GameManager : MonoBehaviour
 					
 					//play cheer music on, load end credits scene
 					AudioManager.instance.PlayMusic("credits");
-					SceneManager.LoadScene(2); 
+					gameWonBlackout.SetActive(true);
+					LeanTween.value(gameWonText.gameObject, updateGameWonTextColor, new Color(1f,1f,1f,0f), gameWonTextColor, 4.5f).setEase(introCurve).setDelay(1.1f);
+					canvas.SetActive(false);
 				}
 				
+				if(timeCount < durationWin) { timeCount += Time.deltaTime; }
+				else { SceneManager.LoadScene(2); }
 				break;
 		}
     }
@@ -172,5 +189,11 @@ public class GameManager : MonoBehaviour
 	
 	void updateEnemyTextColor(Color val){
 		enemyText.color = val;
+	}
+	void updateGameOverTextColor(Color val){
+		gameOverText.color = val;
+	}
+	void updateGameWonTextColor(Color val){
+		gameWonText.color = val;
 	}
 }
