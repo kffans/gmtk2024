@@ -1895,6 +1895,30 @@ MonoBehaviour:
   - {fileID: 3835023583486778581, guid: f027d3e5ee5e8dd4b8e9c4b8ece4757b, type: 3}
   - {fileID: 3925154247086707007, guid: 22e9fb8394f3d1b4fa35bbd83b25d708, type: 3}
   currentSwordBlade: {fileID: 0}
+  swordCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.5136268
+      outSlope: -0.5136268
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14999998
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   arms: {fileID: 1148353936}
   cameraRect: {fileID: 1635200618}
   enemyParent: {fileID: 1802718924}
@@ -1935,7 +1959,7 @@ MonoBehaviour:
   - prefab: {fileID: 5249783969435395515, guid: 9cd762f4d1c73904e98a2038c9ec4e48, type: 3}
     name: Turnip
     sfxName: plant
-    durationChallenge: 5
+    durationChallenge: 4
     challengeFactor: 1
     swordLevelUp: 1
     sway: {x: 3, y: 2}
@@ -1995,7 +2019,7 @@ MonoBehaviour:
   - prefab: {fileID: 5666935653775171240, guid: 5f851d3e7c4035c46bed386fbf694c1c, type: 3}
     name: Batt
     sfxName: bat
-    durationChallenge: 8
+    durationChallenge: 7
     challengeFactor: 0.7
     swordLevelUp: 0
     sway: {x: 6, y: 2}
@@ -2055,7 +2079,7 @@ MonoBehaviour:
   - prefab: {fileID: 5148503822699374510, guid: 57dc74312722c144595358586ed84971, type: 3}
     name: Phish
     sfxName: fish
-    durationChallenge: 6
+    durationChallenge: 5
     challengeFactor: 0.6
     swordLevelUp: 0
     sway: {x: 2, y: 1}
@@ -2115,7 +2139,7 @@ MonoBehaviour:
   - prefab: {fileID: 6450847836308245750, guid: 29da75d3d7d4b5a45bd2cbb0a8006f9f, type: 3}
     name: Hare
     sfxName: rabbit-axe
-    durationChallenge: 3
+    durationChallenge: 2.5
     challengeFactor: 0.6
     swordLevelUp: 1
     sway: {x: 5, y: 1}
@@ -2203,8 +2227,8 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0.77131605
       - serializedVersion: 3
-        time: 0.648212
-        value: 0.0005829632
+        time: 0.7914615
+        value: -0.0010039508
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -2212,8 +2236,8 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6528567
-        value: 0.0018701479
+        time: 0.80994594
+        value: 0.0019006655
         inSlope: -0.10839433
         outSlope: -0.10839433
         tangentMode: 0
@@ -2235,7 +2259,7 @@ MonoBehaviour:
   - prefab: {fileID: 2296583723091544568, guid: 2aeb4db5542aa14478a68028023b1468, type: 3}
     name: "H\xE4nd"
     sfxName: hand
-    durationChallenge: 4
+    durationChallenge: 3.5
     challengeFactor: 0.4
     swordLevelUp: 0
     sway: {x: 5, y: 1}
@@ -2295,7 +2319,7 @@ MonoBehaviour:
   - prefab: {fileID: 6560136819002788086, guid: ac8b5ad4c605ed5468d3fe405c49df04, type: 3}
     name: Slizard
     sfxName: snake
-    durationChallenge: 6
+    durationChallenge: 5
     challengeFactor: 0.3
     swordLevelUp: 0
     sway: {x: 3, y: 2}
@@ -2358,7 +2382,7 @@ MonoBehaviour:
     durationChallenge: 5
     challengeFactor: 0.2
     swordLevelUp: 0
-    sway: {x: 100, y: 0.3}
+    sway: {x: 70, y: 0.3}
     zoom: 400
     zoomDisplace: {x: 0, y: 0}
     curve:
@@ -2448,7 +2472,7 @@ MonoBehaviour:
   - prefab: {fileID: 2087841400641462409, guid: 72361515c10710940ba189b37b3828f9, type: 3}
     name: Serpentlegs
     sfxName: pterodaktyl
-    durationChallenge: 7
+    durationChallenge: 6
     challengeFactor: 0.1
     swordLevelUp: 0
     sway: {x: 3, y: 0.5}
@@ -2481,7 +2505,7 @@ MonoBehaviour:
   - prefab: {fileID: 8160498413043814213, guid: ee1264fad51e8ed48857fbac3ada8dbc, type: 3}
     name: Vulpis
     sfxName: maybe-hyenna
-    durationChallenge: 6
+    durationChallenge: 5.5
     challengeFactor: 0.1
     swordLevelUp: 0
     sway: {x: 0.5, y: 2}
@@ -2523,7 +2547,7 @@ MonoBehaviour:
   - prefab: {fileID: 2795528414502091368, guid: 0892a36239d04f64c80dd57f13569782, type: 3}
     name: Basilisk
     sfxName: hen-cock
-    durationChallenge: 7
+    durationChallenge: 6
     challengeFactor: 0.08
     swordLevelUp: 0
     sway: {x: 3, y: 2}
@@ -2610,7 +2634,7 @@ MonoBehaviour:
   - prefab: {fileID: 5736963987121772338, guid: 03c78b7be85d04c468fd51aeb9383495, type: 3}
     name: Unicorn
     sfxName: unicorn-1
-    durationChallenge: 11
+    durationChallenge: 10
     challengeFactor: 0.06
     swordLevelUp: 1
     sway: {x: 6, y: 3}
@@ -2679,8 +2703,8 @@ MonoBehaviour:
   - prefab: {fileID: 5020469506557060971, guid: 99f93aee8a811c9458a36855efae2762, type: 3}
     name: Dragon
     sfxName: scierwojad
-    durationChallenge: 9
-    challengeFactor: 0.02
+    durationChallenge: 10
+    challengeFactor: 0.03
     swordLevelUp: 0
     sway: {x: 2, y: 4}
     zoom: 600
